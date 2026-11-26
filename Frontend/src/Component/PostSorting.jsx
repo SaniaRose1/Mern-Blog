@@ -4,7 +4,7 @@ export function PostSorting({ fields = [] , value,
  orderValue,
  onOrderChange,}) {
  return (
-    <div>
+    <div style={{backgroundColor:"lightgoldenrodyellow"  , color:"red" , fontSize:"20px" , fontWeight:"bold"  }}>
  <label htmlFor='sortBy'>Sort By: </label>
  <select name='sortBy' id='sortBy' value={value}
  onChange={(e) => onChange(e.target.value)}>

@@ -25,7 +25,8 @@ export function CreatePost() {
     }
 
     return (
-        <form onSubmit={handleSubmit} >
+        <form onSubmit={handleSubmit} style={{backgroundColor:"lightgoldenrodyellow"  , color:"red" , fontSize:"20px" , fontWeight:"bold"}}>
+            <h1 style={{color:"purple" , fontStyle:"italic"}}>CREATE POSTS</h1>
             <div>
                 <label htmlFor='create-title'>Title: </label>
                 <input
@@ -34,6 +35,7 @@ export function CreatePost() {
                     id='create-title'
                     value={title}
                     onChange={(e) => setTitle(e.target.value)}
+                    style={{height:"30px", width:"200px" , borderRadius:"20px"}}
                 />
             </div>
 
@@ -47,6 +49,7 @@ export function CreatePost() {
                     id='create-author'
                     value={author}
                     onChange={(e) => setAuthor(e.target.value)}
+                     style={{height:"30px", width:"200px" , borderRadius:"20px"}}
                 />
             </div>
 
@@ -55,7 +58,8 @@ export function CreatePost() {
             <textarea
                 value={contents}
                 onChange={(e) => setContents(e.target.value)}
-                style={{height:"50px" , width:"250px" }}
+                style={{height:"50px" , width:"250px" , borderRadius:"20px"}}
+                
             />
 
             <br />
@@ -65,6 +69,7 @@ export function CreatePost() {
                 type='submit'
                 value={createPostMutation.isPending ? 'Creating...' : 'Create'}
                 disabled={!title || createPostMutation.isPending}
+                style={{height:"40px" , width:"150px" , backgroundColor:"green" , color:"red" , borderRadius:"10px" , fontSize:"20px" , fontWeight:"bold"}}
             />
             
             {createPostMutation.isError && (
